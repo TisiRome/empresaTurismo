@@ -2,10 +2,10 @@
 define("KEY", "turism23");
 define("COD", "AES-128-ECB");
 
-$host = "localhost";
-$usuario = "root";
-$contrasenia = "";
-$bd = "agenciaturismo";
+$host = "sql300.infinityfree.com";
+$usuario = "if0_39238710";
+$contrasenia = "I3xt6ZbOBIV";
+$bd = "if0_39238710_agenciaturismo";
 
 try {
     $conexion = new PDO("mysql:host=$host;dbname=$bd;charset=utf8", $usuario, $contrasenia);

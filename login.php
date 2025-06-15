@@ -2,7 +2,7 @@
 session_start();
 include('templates/header.php');
 try {
-    $conexion = new PDO("mysql:host=localhost;dbname=agenciaturismo", "root", "");
+    include('administrador/database/bd.php');
     $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $correo = $_POST['correo'];

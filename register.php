@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mensajeErrorCorreo = "Este nombre de usuario está reservado. Elija otro.";
     } else {
         try {
-            $conexion = new PDO("mysql:host=localhost;dbname=agenciaturismo", "root", "");
+            include('administrador/database/bd.php');
             $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
             $sql = "INSERT INTO usuario (nombreUser, emailUser, passUser) 

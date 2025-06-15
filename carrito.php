@@ -125,8 +125,18 @@ if(isset($_POST['accion'])){
                         echo "<script>alert('Elemento borrado');</script>";
                     }
                 }
+            }elseif(is_numeric(openssl_decrypt($_POST['txtIDPack'],COD,KEY))){
+                $IDPack=openssl_decrypt($_POST['txtIDPack'],COD,KEY);
+                $mensaje="Ok. ID correcto".$IDPack;
+
+                foreach($_SESSION['CARRITO'] as $indice=>$paquete){
+                    if ($paquete['IDPack']==$IDPack){
+                        unset($_SESSION['CARRITO'][$indice]);
+                        echo "<script>alert('Elemento borrado');</script>";
+                    }
+                }
             }else{
-                $mensaje.="Error. ID incorrecto. ".$IDServ."<br/>";
+                $mensaje.="Error. ID incorrecto. "."<br/>";
             }
         break;
     }
