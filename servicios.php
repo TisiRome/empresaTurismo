@@ -1,7 +1,7 @@
 <?php
-    include('../administrador/database/bd.php');
+    include('administrador/database/bd.php');
     include('carrito.php');
-    include('../www/templates/header.php');
+    include('templates/header.php');
 ?>
 <?php
     $sentencia=$conexion->prepare("SELECT * FROM servicios");
@@ -41,4 +41,4 @@
         </div>
     </div>
 </main>
-<?php include('../www/templates/footer.php'); ?>
+<?php include('templates/footer.php'); ?>

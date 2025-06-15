@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Empresa de turismo</title>
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -23,20 +23,20 @@
                 <?php if (isset($_SESSION['usuario'])): ?>
                 <!-- Si está logueado -->
                 <li>
-                    <a class="nav-link" href="../www/index.php" id="linkLogin"> Paquetes turísticos</a>
+                    <a class="nav-link" href="index.php" id="linkLogin"> Paquetes turísticos</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="../www/servicios.php" id="linkLogin"> Servicios adicionales</a>
+                    <a class="nav-link" href="servicios.php" id="linkLogin"> Servicios adicionales</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="../www/mostrarCarrito.php" id="linkLogin"><i class="fa-solid fa-cart-shopping"></i> Ver carrito 
+                    <a class="nav-link" href="mostrarCarrito.php" id="linkLogin"><i class="fa-solid fa-cart-shopping"></i> Ver carrito 
                     (<?php 
                         echo (empty($_SESSION['CARRITO']))?0:count($_SESSION['CARRITO']);
                     ?>)
                     </a>
                 </li>
                 <li>
-                    <a class="nav-link" href="../usuario/cerrar.php" id="linkLogin"><i class="fa-solid fa-right-to-bracket"></i> Cerrar sesión (<?= htmlspecialchars($_SESSION['nombreUsuario']) ?>)</a>
+                    <a class="nav-link" href="usuario/cerrar.php" id="linkLogin"><i class="fa-solid fa-right-to-bracket"></i> Cerrar sesión (<?= htmlspecialchars($_SESSION['nombreUsuario']) ?>)</a>
                 </li>
                 <?php elseif (!isset($_SESSION['nombreAdmin'])): ?>
                 <!-- Si NO hay usuario NI admin logueado -->
@@ -46,10 +46,10 @@
                 <?php endif; ?>
                 <?php if (isset($_SESSION['nombreAdmin'])): ?>
                 <li>
-                    <a class="nav-link" href="../administrador/inicio.php" id="linkLogin"></i>Volver al editor</a>
+                    <a class="nav-link" href="administrador/inicio.php" id="linkLogin"></i>Volver al editor</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="../administrador/cerrar.php" id="linkLogin"><i class="fa-solid fa-right-to-bracket"></i> Cerrar sesión</a>
+                    <a class="nav-link" href="administrador/cerrar.php" id="linkLogin"><i class="fa-solid fa-right-to-bracket"></i> Cerrar sesión</a>
                 </li>
                 <?php endif; ?>
             </ul>

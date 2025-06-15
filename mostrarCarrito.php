@@ -1,7 +1,7 @@
 <?php
-    include('../administrador/database/bd.php');
+    include('administrador/database/bd.php');
     include('carrito.php');
-    include('../www/templates/header.php');
+    include('templates/header.php');
 ?>
 <main>
 <div class="container-fluid">
@@ -91,5 +91,5 @@
 </div>
 </main>
 <?php
-    include('../www/templates/footer.php')
+    include('templates/footer.php')
 ?>

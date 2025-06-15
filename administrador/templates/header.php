@@ -25,7 +25,7 @@
                     <a class="nav-link" aria-current="page" href="servicios.php">Gestor de servicios</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="../www/index.php"><i class="fa-solid fa-eye"></i> Ver sitio web</a>
+                    <a class="nav-link" aria-current="page" href="../index.php"><i class="fa-solid fa-eye"></i> Ver sitio web</a>
                 </li>
             </ul>
             <ul class="navbar-nav ms-auto">

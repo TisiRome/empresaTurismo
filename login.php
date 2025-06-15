@@ -10,7 +10,7 @@ try {
       if ($correo === "Administrador" && $contrasenia === "turismo") {
           $_SESSION['nombreAdmin'] = "OK";
           $_SESSION['nombreUsuario'] = "Administrador";
-          header("Location: ../administrador/inicio.php");
+          header("Location: administrador/inicio.php");
           exit();
       }
       $consulta = $conexion->prepare("SELECT * FROM usuario WHERE emailUser = :correo");

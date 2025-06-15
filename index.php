@@ -1,5 +1,5 @@
 <?php
-include('../administrador/database/bd.php');
+include('administrador/database/bd.php');
 include('carrito.php');
 
 $sentencia = $conexion->prepare("SELECT idPack, nombrePack, tipoPack, precioBase FROM paquetes");
