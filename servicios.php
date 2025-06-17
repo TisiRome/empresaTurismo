@@ -24,7 +24,7 @@
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title"><?php echo $servicio['nombreServ']; ?></h5>
                         <p class="card-text"><?php echo $servicio['calidadServ']; ?></p>
-                        <p class="card-text">$<?php echo $servicio['precioServ']; ?></p>
+                        <h4 class="text-center">$<?php echo $servicio['precioServ']; ?></h4>
                         <form method="POST" action="" class="mt-auto">
                             <input type="hidden" name="txtIDServ" id="txtIDServ" value="<?php echo openssl_encrypt( $servicio['idServ'],COD,KEY) ;?>">
                             <input type="hidden" name="txtNombreServ" id="txtNombreServ" value="<?php echo openssl_encrypt($servicio['nombreServ'],COD,KEY) ;?>">

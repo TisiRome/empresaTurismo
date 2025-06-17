@@ -21,7 +21,7 @@
         </div>
         <div class="row">
             <div class="col-md text-center"> 
-                <p>&copy; 2025 Aerolineas. Todos los derechos reservados.</p>
+                <p>&copy; 2025 VolAR. Todos los derechos reservados.</p>
             </div>
         </div>
     </div>

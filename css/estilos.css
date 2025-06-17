@@ -1,64 +1,73 @@
 body {
     background-color: #c2dfeb;
-    height: 100%;
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
     font-size: medium;
     font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
 }
+
 form p {
-    padding: 0 1rem 0 1rem;
+    padding: 0 1rem;
     margin: 0;
     font-size: small;
     color: white;
 }
+
 main {
+    display: block;
+    width: 100%;
     flex: 1;
-    display: flex;
-    flex-direction: column;
 }
+
 footer {
     background-color: #050505;
-    height: auto;
     text-align: center;
     padding: 1rem;
 }
+
 #contenedorForm {
     position: relative;
-    padding-top: 1rem;
-    padding-bottom: 8rem;
     background-image: url(../img/imgBackgrounds/paisaje.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    padding-top: 2rem;
+    padding-bottom: 8rem;
     margin: 0;
-    z-index: 0;
     overflow: hidden;
 }
+
 #contenedorForm::before {
     content: "";
     position: absolute;
     inset: 0;
-    backdrop-filter: blur(3px);
-    background-color: rgba(0, 0, 0, 0.1);
-    z-index: 1;
+    backdrop-filter: blur(6px);
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 0;
 }
+
 #contenedorForm > .container-fluid {
     position: relative;
-    z-index: 2;
+    z-index: 1;
 }
+
+#contenedorForm h1 {
+    color: white;
+}
+
 #navPrincipal {
     background-color: #74c7ca;
 }
+
 .nav-link:hover {
     color: cornflowerblue;
 }
+
 #form {
     position: relative;
-    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,22 +76,24 @@ footer {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 92vh;
+    min-height: 60vh;
     margin: 0;
     z-index: 0;
     overflow: hidden;
 }
+
 #form::before {
     content: "";
     position: absolute;
     inset: 0;
-    backdrop-filter: blur(5px); /* más difuminado */
-    background-color: rgba(255, 255, 255, 0.05); /* capa casi transparente */
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.05);
     z-index: 1;
 }
+
 #formularioPack {
     position: relative;
-    z-index: 2; /* Esto lo hace verse por encima del fondo */
+    z-index: 2;
     width: 30rem;
     max-width: 100%;
     background-color: white;
@@ -90,28 +101,32 @@ footer {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
+
 #formularioPack input {
     background-color: white;
     display: block;
     width: 100%;
     height: 1em;
     padding: 1rem;
-    margin: 0.5rem 0 0.5rem 0;
+    margin: 0.5rem 0;
     border: 2px solid #1b3057;
     border-radius: 5px;
     font-size: small;
 }
+
 #formularioPack h4 {
     margin: 0;
     padding: 1rem;
     text-align: center;
     font-size: medium;
 }
+
 .imgPack {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
 .card {
     background-color: #ffffff;
     border: none;
@@ -121,20 +136,23 @@ footer {
     overflow: hidden;
     width: 20rem;
 }
+
 .card .col-md-12.img-container {
   margin-bottom: 0;
   padding-bottom: 0;
 }
+
 .card:hover {
     transform: scale(1.02);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
+
 .card img .imgPack {
     height: 60%;
     width: 100%;
     object-fit: cover;
-    
 }
+
 .card-body {
     padding: 1rem;
     padding-top: 0rem;
@@ -144,6 +162,7 @@ footer {
     justify-content: center;
     text-align: left;
 }
+
 .card-title {
     font-size: 2rem;
     font-weight: 300;
@@ -152,10 +171,12 @@ footer {
     padding-top: 0.1rem;
     font-style: italic;
 }
+
 .card-text {
     font-size: 0.95rem;
     color: #555;
 }
+
 #cardsContainer {
     display: flex;
     flex-wrap: wrap;
@@ -163,6 +184,7 @@ footer {
     gap: 1.5rem;
     padding: 2rem;
 }
+
 .cards-horizontal {
     display: flex;
     flex-direction: row;
@@ -170,6 +192,7 @@ footer {
     overflow-x: auto;
     padding: 1rem;
 }
+
 #formularioLogin {
     position: relative;
     z-index: 2;
@@ -180,20 +203,23 @@ footer {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
+
 #formularioLogin input {
     display: block;
     width: 100%;
     height: 1em;
     padding: 1rem;
-    margin: 0.5rem 0 0.5rem 0;
+    margin: 0.5rem 0;
     border: 2px solid #1b3057;
     border-radius: 5px;
     font-size: small;
 }
+
 #formularioLogin h4 {
     text-align: center;
-    margin: 2rem
+    margin: 2rem;
 }
+
 .btnLogin {
     display: inline-block;
     margin: 0.5rem;
@@ -205,45 +231,46 @@ footer {
     border-radius: 10rem;
     font-size: small;
 }
+
 .iconoFooter {
     width: 2rem;
     height: 2rem;
 }
+
 #mensajeErrorCorreo {
     justify-content: center;
-    background-color: #ffe6e6; 
-    color: #cc0000; 
-    padding: 10px; 
-    margin-bottom: 10px; 
-    border: 1px solid #cc0000; 
+    background-color: #ffe6e6;
+    color: #cc0000;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #cc0000;
     border-radius: 5px;
 }
-#cardsContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-}
+
 .estilo-texto {
   color: rgb(8, 8, 8);
   text-align: left;
-  font-size: 1.6rem; 
+  font-size: 1.6rem;
   font-weight: bold;
   padding-top: 0.5rem;
   padding-bottom: 0;
   margin: 0;
   font-style: oblique;
 }
+
 .texto-chico {
-font-size: small;
+  font-size: small;
 }
-.iniciar-sesion{
- color: rgb(11, 12, 12);
+
+.iniciar-sesion {
+  color: rgb(11, 12, 12);
 }
+
 #contenedorPack {
     height: 70vh;
     padding: 1rem;
 }
+
 #formularioIngresoPack {
     position: relative;
     width: 30rem;
@@ -253,80 +280,107 @@ font-size: small;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
-#formularioIngresoPack input {
-    background-color: white;
-    display: block;
-    width: 100%;
-    height: 1em;
-    padding: 1rem;
-    margin: 0.5rem 0 0.5rem 0;
-    border: 2px solid #1b3057;
-    border-radius: 5px;
-    font-size: small;
-}
+
+#formularioIngresoPack input,
 #formularioIngresoPack select {
     background-color: white;
     display: block;
     width: 100%;
-    margin: 0.5rem 0 0.5rem 0;
+    padding: 1rem;
+    margin: 0.5rem 0;
     border: 2px solid #1b3057;
     border-radius: 5px;
     font-size: small;
 }
+
 #formularioIngresoPack h4 {
     margin: 0;
     padding: 1rem;
     text-align: center;
     font-size: medium;
 }
+
 #tablaPaquetes {
     width: 100%;
-    height: auto;
     padding: 1rem;
     background-color: white;
-    border: 2px solid #1b3057;
-    border: none;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
+
 .tiposPack {
     width: 20%;
     display: inline-block;
     text-align: center;
     font-size: small;
 }
+
+.cardPack {
+    height: 20vh;
+    width: 100%;
+}
+
+.cardPack h5 {
+    text-align: center;
+    font-size: large;
+}
+
+.cardPack button {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+}
+
 .tiposServ {
-    width: 32,5%;
-    margin: 0 1rem 0 1rem;
+    width: 32.5%;
+    margin: 0 1rem;
     display: inline-block;
     font-size: small;
 }
+
 .cardServ {
     height: 100%;
     width: 100%;
 }
+
 .cardServ h5 {
     text-align: center;
     font-size: large;
 }
+
 .cardServ button {
     display: flex;
     flex-direction: column;
     text-align: center;
     width: 100%;
 }
+
 #contenedorServ h3 {
     margin: 0;
     padding: 1rem;
     text-align: center;
     color: black;
 }
+
 #h4Bienvenido {
     text-align: center;
     color: rgb(10, 88, 141);
     font-style: initial;
     font-family: 'Times New Roman', Times, serif;
 }
+
 #bienvenidoContent {
     background-color: white;
+}
+
+#carruselPrincipal {
+    height: auto;
+}
+
+.carruselImagen {
+    width: 100%;
+    height: 92vh;
+    object-fit: cover;
+    filter: brightness(40%);
 }
